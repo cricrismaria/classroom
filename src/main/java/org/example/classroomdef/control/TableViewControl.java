@@ -52,7 +52,6 @@ public class TableViewControl implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         classroom = Classroom.getInstance();
-        ArrayList<UserAccount> accounts = classroom.getAccounts();
 
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
@@ -79,10 +78,7 @@ public class TableViewControl implements Initializable {
 
         fourthColumn.setCellValueFactory(new PropertyValueFactory<>("sex"));
 
-
-        for (int i = 0; i<accounts.size(); i++){
-            table.getItems().add(accounts.get(i));
-        }
+        table.setItems(classroom.getAccounts());
 
     }
 
@@ -98,5 +94,6 @@ public class TableViewControl implements Initializable {
         addName.clear();
         addUser.clear();
         addPassword.clear();
+        addSex.clear();
     }
 }

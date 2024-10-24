@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.classroomdef.control.TableViewControl" alignment="CENTER" spacing="5">
+<VBox alignment="CENTER" spacing="5" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.classroomdef.control.TableViewControl">
 
-    <Label fx:id="titleLabel" text="Students information"/>
+    <Label fx:id="titleLabel" text="Students information" />
 
-    <TableView fx:id="table" maxWidth="400" minWidth="200" maxHeight="400" editable="true">
+    <TableView fx:id="table" editable="true" maxHeight="400" maxWidth="650.0" minWidth="200" prefHeight="373.0" prefWidth="650.0">
         <columns>
             <TableColumn fx:id="firstColumn" text="Name" />
             <TableColumn fx:id="secondColumn" text="User" />
-            <TableColumn fx:id="thirdColumn" text="Password" visible="false"/>
+            <TableColumn fx:id="thirdColumn" text="Password" visible="false" />
             <TableColumn fx:id="fourthColumn" text="Sex" />
 
         </columns>
@@ -25,7 +22,7 @@
         <PasswordField fx:id="addPassword" promptText="Password" />
         <TextField fx:id="addSex" promptText="Sex" />
 
-        <Button fx:id="addAccount" text="Add" onAction="#addAccount"/>
+        <Button fx:id="addAccount" onAction="#addAccount" text="Add" />
     </HBox>
 
 

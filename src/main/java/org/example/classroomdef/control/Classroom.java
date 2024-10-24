@@ -1,15 +1,17 @@
 package org.example.classroomdef.control;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import org.example.classroomdef.model.UserAccount;
 
 import java.util.ArrayList;
 
 public class Classroom {
-    private ArrayList<UserAccount> accounts;
+    private ObservableList<UserAccount> accounts;
     private static Classroom instance;
 
     public Classroom() {
-        accounts = new ArrayList<>();
+        accounts = FXCollections.observableArrayList();
     }
 
     public static Classroom getInstance() {
@@ -46,7 +48,7 @@ public class Classroom {
         return false;
     }
 
-    public ArrayList<UserAccount> getAccounts() {
+    public ObservableList<UserAccount> getAccounts() {
         return accounts;
     }
 

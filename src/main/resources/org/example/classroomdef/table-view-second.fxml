@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.classroomdef.control.TableViewSecond">
+   <children>
+      <HBox layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label fx:id="txtCode" text="Code:" />
+            <TextField fx:id="tfCode" />
+         </children></HBox>
+      <Button fx:id="addButton" layoutX="399.0" layoutY="67.0" mnemonicParsing="false" text="Add" />
+      <TableView fx:id="tableView" layoutX="19.0" layoutY="164.0" prefHeight="200.0" prefWidth="565.0">
+        <columns>
+          <TableColumn fx:id="codeColumn" prefWidth="158.0" text="Code" />
+          <TableColumn fx:id="nameColumn" prefWidth="269.0" text="Name" />
+            <TableColumn fx:id="scoreColumn" prefWidth="137.0" text="Score" />
+        </columns>
+      </TableView>
+      <HBox layoutX="345.0" layoutY="14.0" prefHeight="49.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label fx:id="txtName" text="Name:" />
+            <TextField fx:id="tfName" />
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="63.0" prefHeight="33.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label fx:id="txtScore" text="Score:" />
+            <TextField fx:id="tfScore" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
